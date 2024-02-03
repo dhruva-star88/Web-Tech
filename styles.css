@@ -39,7 +39,7 @@ header {
     text-align: center;
 }
 
-.gallery {
+.gallery:hover {
     padding: 50px;
     text-align: center;
 }
