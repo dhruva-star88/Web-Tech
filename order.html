@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Confirmation | The South Indian Cafe</title>
+    <link rel="stylesheet" href="order.css">
+</head>
+<body>
+
+    <!-- Header with navigation links -->
+    <header>
+        <nav>
+            <div class="menu">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="about.html#contact">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main content area -->
+    <main>
+        <h1>Order Confirmation</h1>
+
+        <!-- Display selected dish details -->
+        <div id="selectedDish"></div>
+
+        <!-- Buttons for placing order and adding another dish -->
+        <div class="button-container">
+            <button id="addDishButton" onclick="redirectToMenu()">Change Dish</button><br>
+
+            <button id="placeOrderButton">Place Order</button>
+        </div>
+    </main>
+
+    <!-- JavaScript to retrieve and display selected dish details -->
+    <script src="order.js"></script>
+
+</body>
+</html>

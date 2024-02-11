@@ -62,3 +62,22 @@ main {
 .dishmenu a:hover {
     text-decoration: underline;
 }
+
+/* Timings Section Styles */
+.timings {
+    margin-top: 40px;
+}
+
+.timings h2 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.timings ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.timings li {
+    margin-bottom: 10px;
+}

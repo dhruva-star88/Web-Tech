@@ -7,8 +7,6 @@
 
     <link rel="stylesheet" href="menu.css">
 
-  <link rel="stylesheet" href="menu.css">
-
     <title>The South Indian Cafe</title>
 </head>
 
@@ -28,51 +26,48 @@
     </header>
 
     <!-- Menu Section -->
-
-
-
     <section>
-        <div class="dish">Dosa<br>Price: ₹50</div>
-        <div class="dish">Idli<br>Price: ₹40</div>
-        <div class="dish">Vada<br>Price: ₹45</div>
-        <div class="dish">Uttapam<br>Price: ₹55</div>
-        <div class="dish">Pongal<br>Price: ₹60</div>
-        <div class="dish">Sambar Rice<br>Price: ₹65</div>
-        <div class="dish">Rava Kesari<br>Price: ₹30</div>
-        <div class="dish">Masala Dosa<br>Price: ₹70</div>
-        <div class="dish">Coconut Chutney<br>Price: ₹25</div>
-        <div class="dish">Pesarattu<br>Price: ₹55</div>
-        <div class="dish">Bisi Bele Bath<br>Price: ₹75</div>
-        <div class="dish">Neer Dosa<br>Price: ₹65</div>
-        <div class="dish">Avial<br>Price: ₹80</div>
-        <div class="dish">Curry Leaf Podi Idli<br>Price: ₹50</div>
-        <div class="dish">Rasam<br>Price: ₹35</div>
-        <div class="dish">Kozhukattai<br>Price: ₹40</div>
-        <div class="dish">Tomato Rice<br>Price: ₹45</div>
-        <div class="dish">Mysore Pak<br>Price: ₹55</div>
-        <div class="dish">Chana Sundal<br>Price: ₹35</div>
-        <div class="dish">Adai Dosa<br>Price: ₹60</div>
+        <h2>South Indian Cafe Menu</h2>
+        <div class="dish" onclick="confirmOrder('Dosa', 50)">Dosa<br>Price: ₹50</div>
+        <div class="dish" onclick="confirmOrder('Idli', 40)">Idli<br>Price: ₹40</div>
+        <div class="dish" onclick="confirmOrder('Vada', 45)">Vada<br>Price: ₹45</div>
+        <div class="dish" onclick="confirmOrder('Uttapam', 55)">Uttapam<br>Price: ₹55</div>
+        <div class="dish" onclick="confirmOrder('Pongal', 60)">Pongal<br>Price: ₹60</div>
+        <div class="dish" onclick="confirmOrder('Sambar Rice', 65)">Sambar Rice<br>Price: ₹65</div>
+        <div class="dish" onclick="confirmOrder('Rava Kesari', 30)">Rava Kesari<br>Price: ₹30</div>
+        <div class="dish" onclick="confirmOrder('Masala Dosa', 70)">Masala Dosa<br>Price: ₹70</div>
+        <div class="dish" onclick="confirmOrder('Coconut Chutney', 25)">Coconut Chutney<br>Price: ₹25</div>
+        <div class="dish" onclick="confirmOrder('Pesarattu', 55)">Pesarattu<br>Price: ₹55</div>
+        <div class="dish" onclick="confirmOrder('Bisi Bele Bath', 75)">Bisi Bele Bath<br>Price: ₹75</div>
+        <div class="dish" onclick="confirmOrder('Neer Dosa', 65)">Neer Dosa<br>Price: ₹65</div>
+        <div class="dish" onclick="confirmOrder('Avial', 80)">Avial<br>Price: ₹80</div>
+        <div class="dish" onclick="confirmOrder('Curry Leaf Podi Idli', 50)">Curry Leaf Podi Idli<br>Price: ₹50</div>
+        <div class="dish" onclick="confirmOrder('Rasam', 35)">Rasam<br>Price: ₹35</div>
+        <div class="dish" onclick="confirmOrder('Kozhukattai', 40)">Kozhukattai<br>Price: ₹40</div>
+        <div class="dish" onclick="confirmOrder('Tomato Rice', 45)">Tomato Rice<br>Price: ₹45</div>
+        <div class="dish" onclick="confirmOrder('Mysore Pak', 55)">Mysore Pak<br>Price: ₹55</div>
+        <div class="dish" onclick="confirmOrder('Chana Sundal', 35)">Chana Sundal<br>Price: ₹35</div>
+        <div class="dish" onclick="confirmOrder('Adai Dosa', 60)">Adai Dosa<br>Price: ₹60</div>
 
         <h2>Beverages</h2>
-
-        <ul>
-            <li>
-                <strong>Filter Coffee:</strong>
-                <span>15Rs</span>
-            </li>
-            <li>
-                <strong>Masala Chai:</strong>
-                <span>15Rs</span>
-            </li>
-            <li>
-                <strong>Buttermilk:</strong>
-                <span>20Rs</span>
-            </li>
-        </ul>
-  
-
+        <div class="beverages" onclick="confirmOrder('Filter coffee', 15)">Filter Coffee<br>Price: ₹15</div>
+        <div class="beverages" onclick="confirmOrder('Butter Milk', 20)">Butter Milk<br>Price: ₹20</div>
+        <div class="beverages" onclick="confirmOrder('Tea', 15)">Tea<br>Price: ₹15</div>
+        <div class="beverages" onclick="confirmOrder('Elachi Tea', 20)">Elachi Tea<br>Price: ₹20</div>
+        <div class="beverages" onclick="confirmOrder('Black Coffee', 20)">Black Coffee<br>Price: ₹20</div>
+        <div class="beverages" onclick="confirmOrder('lemon juice', 20)">lemon juice<br>Price: ₹20</div>
     </section>
 
+    <script>
+        // Function to confirm order and redirect to order page with dish details
+        function confirmOrder(item, price) {
+            if (confirm(`Do you want to order ${item}?`)) {
+                // Redirect to the order page with dish details as URL parameters
+                window.location.href = `order.html?item=${encodeURIComponent(item)}&price=${price}`;
+            }
+        }
+    </script>
+    
 </body>
 
 </html>

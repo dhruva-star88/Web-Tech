@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -7,44 +7,6 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    
-
-<script>
-    function smoothScroll(target, duration) {
-        var targetElement = document.getElementById(target);
-        var targetPosition = targetElement.getBoundingClientRect().top;
-        var startPosition = window.pageYOffset || window.scrollY;
-        var startTime = null;
-
-        function animation(currentTime) {
-            if (startTime === null) startTime = currentTime;
-            var timeElapsed = currentTime - startTime;
-            var run = ease(timeElapsed, startPosition, targetPosition, duration);
-            window.scrollTo(0, run);
-            if (timeElapsed < duration) requestAnimationFrame(animation);
-        }
-
-        function ease(t, b, c, d) {
-            t = d / 2;
-            if (t < 1) 
-            return c / 2 * t * t + b;
-            t--;
-            return -c / 2 * (t * (t - 2) - 1) + b;
-        }
-
-        requestAnimationFrame(animation);
-    }
-
-    // Smooth scroll trigger
-    document.getElementById('trigger1').addEventListener('click', function() {
-        smoothScroll('section2', 1000); // Change 'section2' to the ID of the target section
-    });
-
-    document.getElementById('trigger2').addEventListener('click', function() {
-        smoothScroll('section3', 1000); // Change 'section3' to the ID of the target section
-    });
-</script>
-
     <body class="custom-background">
         <header>
             <nav>
@@ -53,8 +15,9 @@
                     <a href="about.html">About</a>
                     <a href="about.html#contact">Contact</a>
                 </div>
-                
-                
+                <div class="login">
+                    <a href="#" id="loginButton">Login</a>
+                </div>
             </nav>
         </header>
         <main>
@@ -69,7 +32,7 @@
                 Our ambiance pays tribute to a bygone era, with warm, earthy tones, and rustic decor that echoes the timeless charm of South Indian households. The friendly chatter of families and the tantalizing scent of spices in the air create an atmosphere that transcends time, inviting you to experience the nostalgia of a home-cooked meal.
 
                 Immerse yourself in the symphony of flavors that have stood the test of time. "Savoring Tradition" is not just a restaurant; it's a journey into the heart of South India's culinary legacy. Come, dine with us, and let the taste of tradition linger on your palate.
-</p>
+             </p>
             </section>
             <section class="gallery">
                 <h2>Culinary panorama</h2>
@@ -86,9 +49,25 @@
         <div class="dishmenu">
         <p><a href="menu.html">Dish Menu</a></p>
         </div>
+
+
+        <!-- Login Modal -->
+        <div id="loginModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Welcome To South-Indian Cafe </h2>
+                <h3>Please Login Here</h3>
+                <form id="loginForm">
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" name="username">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password">
+                    <button type="submit">Login</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Include the login JavaScript file -->
+        <script src="login.js"></script>
     </body>
-
 </html>
-
-</html>
-
